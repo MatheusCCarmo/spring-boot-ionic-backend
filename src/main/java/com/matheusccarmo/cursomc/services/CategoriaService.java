@@ -25,4 +25,8 @@ public class CategoriaService {
 		return obj; 
 	}
 	
+	public void salvarTodos(List<Categoria> lista) {
+		repo.saveAll(lista);
+	}
+	
 }
