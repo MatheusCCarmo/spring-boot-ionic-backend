@@ -30,4 +30,10 @@ public class CategoriaService {
 		repo.saveAll(lista);
 	}
 	
+	
+	public Categoria insert(Categoria obj) {
+		obj.setId(null);
+		return repo.save(obj);
+	}
+	
 }
