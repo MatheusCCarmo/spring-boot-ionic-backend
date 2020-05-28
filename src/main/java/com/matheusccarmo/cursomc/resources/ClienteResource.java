@@ -20,13 +20,13 @@ public class ClienteResource {
 	private ClienteService service;
 	
 	@GetMapping
-	public ResponseEntity<?> listar() {
+	public ResponseEntity<List<Cliente>> listar() {
 		List<Cliente> obj = service.listar();
 		return ResponseEntity.ok().body(obj);
 	}
 	
 	@GetMapping(path = "/{id}")
-	public ResponseEntity<?> find(@PathVariable int id) {
+	public ResponseEntity<Cliente> find(@PathVariable int id) {
 		Cliente obj = service.buscar(id);
 		return ResponseEntity.ok().body(obj);
 	}
