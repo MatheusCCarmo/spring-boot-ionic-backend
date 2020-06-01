@@ -23,9 +23,8 @@ public class CategoriaService {
 		return obj.orElseThrow(() ->  new ObjectNotFoundException(String.format("Objeto não encontrado! ID:%d, TIPO: %s", id, Categoria.class.getName()))); 
 	}
 	
-	public List<Categoria> listar() {
-		List<Categoria> obj = repo.findAll();
-		return obj; 
+	public List<Categoria> findAll() {
+		return repo.findAll();
 	}
 	
 	public void salvarTodos(List<Categoria> lista) {
